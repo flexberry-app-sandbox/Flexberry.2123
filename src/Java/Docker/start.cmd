@@ -1,0 +1,1 @@
+docker-compose -p 2123-java up -d

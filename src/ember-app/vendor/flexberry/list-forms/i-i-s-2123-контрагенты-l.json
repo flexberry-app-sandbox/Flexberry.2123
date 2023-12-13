@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-2123-контрагенты-e",
+  "editForm": "i-i-s-2123-контрагенты-e",
+  "external": false,
+  "caption": "Контрагенты",
+  "name": "IIS2123КонтрагентыL",
+  "className": "КонтрагентыL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-2123-контрагенты",
+      "modelProjection": "КонтрагентыL"
+    }
+  ]
+}

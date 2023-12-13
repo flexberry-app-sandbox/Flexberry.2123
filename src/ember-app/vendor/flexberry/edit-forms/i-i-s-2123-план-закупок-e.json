@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "План закупок",
+  "name": "IIS2123ПланЗакупокE",
+  "className": "ПланЗакупокE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-2123-план-закупок",
+      "modelProjection": "ПланЗакупокE"
+    }
+  ]
+}

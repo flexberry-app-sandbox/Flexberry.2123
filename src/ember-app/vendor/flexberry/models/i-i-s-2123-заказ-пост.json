@@ -1,0 +1,216 @@
+﻿{
+  "name": "IIS2123ЗаказПост",
+  "modelName": "i-i-s-2123-заказ-пост",
+  "className": "ЗаказПост",
+  "nameSpace": "IIS.2123",
+  "parentModelName": "i-i-s-2123-отчет-о-зак",
+  "parentClassName": "ОтчетОЗак",
+  "attrs": [
+    {
+      "name": "датаНачала",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаОкончания",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номер",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "состОтгрузки",
+      "type": "i-i-s-2123-сост-поставок",
+      "flexberryType": "СостПоставок",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "состояниеОплаты",
+      "type": "i-i-s-2123-сост-оплаты",
+      "flexberryType": "СостОплаты",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "суммаВклНДС",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "суммаДокумента",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "контрагенты",
+      "relatedTo": "i-i-s-2123-контрагенты",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "организации",
+      "relatedTo": "i-i-s-2123-организации",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "склады",
+      "relatedTo": "i-i-s-2123-склады",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "заказ",
+      "relatedTo": "i-i-s-2123-т-ч-заказ",
+      "inverse": "заказПост"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ЗаказПостE",
+      "modelName": "i-i-s-2123-заказ-пост",
+      "attrs": [
+        {
+          "name": "номер",
+          "caption": "Номер",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "датаНачала",
+          "caption": "Дата начала",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаОкончания",
+          "caption": "Дата окончания",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "состояниеОплаты",
+          "caption": "Состояние оплаты",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "состОтгрузки",
+          "caption": "Сост отгрузки",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "суммаВклНДС",
+          "caption": "Сумма вкл НДС",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "суммаДокумента",
+          "caption": "Сумма документа",
+          "hidden": false,
+          "index": 6
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "ТЧЗаказE",
+          "caption": "Заказ",
+          "name": "заказ",
+          "relatedTo": "i-i-s-2123-т-ч-заказ",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ЗаказПостL",
+      "modelName": "i-i-s-2123-заказ-пост",
+      "attrs": [
+        {
+          "name": "состояниеОплаты",
+          "caption": "Состояние оплаты",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "состОтгрузки",
+          "caption": "Сост отгрузки",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "суммаВклНДС",
+          "caption": "Сумма вкл НДС",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "суммаДокумента",
+          "caption": "Сумма документа",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "датаНачала",
+          "caption": "Дата начала",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "датаОкончания",
+          "caption": "Дата окончания",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "номер",
+          "caption": "Номер",
+          "hidden": false,
+          "index": 6
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

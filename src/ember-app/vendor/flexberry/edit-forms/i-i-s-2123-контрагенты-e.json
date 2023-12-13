@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Контрагенты",
+  "name": "IIS2123КонтрагентыE",
+  "className": "КонтрагентыE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-2123-контрагенты",
+      "modelProjection": "КонтрагентыE"
+    }
+  ]
+}
